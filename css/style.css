@@ -97,9 +97,10 @@ ul {
        width: 100%;
        background-color: hsl(250, 60%, 98%);
        padding: 2rem 1.5rem 4rem;
-       box-shadow: 0 -1px 4px rgba(0, 0, 0, .15 );
+       box-shadow: 0 -10px 50px rgba(0, 0, 0, .15 );
        border-radius: 1.2rem 1.2rem 0 0;
-       transition: .3s;
+       transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+
    }
 }
 
@@ -134,6 +135,7 @@ ul {
    cursor: pointer;
    color: hsl(250, 8%, 15%);
 }
+
 
 /* show menu */
 .show-menu {
@@ -187,6 +189,11 @@ ul {
        margin-right: auto;
    }
 }
+
+
+
+
+
 /*--=============== NAVIGATION CLOSS===============*/
 
 .container{
@@ -211,22 +218,28 @@ ul {
 
 .container .products-container .product{
    text-align: center;
-   padding:3rem 2rem;
-   background: #fff;
-   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-   border-radius: 20px;
+   padding:0;
+   padding-bottom: 3rem;
+   background: linear-gradient(145deg, #ececec, #ffffff);
+   box-shadow: 0 .5rem 2rem rgba(0,0,0,.1);
+   border-radius: 30px;
    outline: .1rem solid #ccc;
    outline-offset: -1.5rem;
    cursor: pointer;
+   width:auto;
+   transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
 }
 
 .container .products-container .product:hover{
    outline: .2rem solid #222;
    outline-offset: 0;
+   
 }
 
 .container .products-container .product img{
-   height: 25rem;
+   height: auto;
+   width: 100%;
+   border-radius: 30px 30px 0px 0px;
 }
 
 .container .products-container .product:hover img{
@@ -275,6 +288,7 @@ ul {
 
 .products-preview .preview img{
    height: 30rem;
+   border-radius: 50%;
 }
 
 .products-preview .preview .fa-times{
@@ -376,21 +390,27 @@ ul {
 
    .container .products-container .product{
       text-align: center;
-      padding:3rem 2rem;
-      background: #fff;
-      box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-      border-radius: 20px;
+      padding:0;
+      padding-bottom: 3rem;
+      background: linear-gradient(145deg, #ececec, #ffffff);
+      box-shadow: 0 .5rem 2rem rgba(0,0,0,.1);
+      border-radius: 30px;
       outline: .1rem solid #ccc;
       outline-offset: -1.5rem;
       cursor: pointer;
       width:auto;
-   
+      transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+      
    }
    .products-preview .preview img{
-      height: 50px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
    }
    .container .products-container .product img{
-      height: 50px;
+      height: auto;
+      width: 100%;
+      border-radius: 30px 30px 0px 0px;
    }
    .container .products-container{
       display: grid;
@@ -401,20 +421,6 @@ ul {
 
 
 @media (max-width:360px){
-   .container .products-container .product{
-      text-align: center;
-      padding:3rem 2rem;
-      background: #fff;
-      box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-      border-radius: 20px;
-      outline: .1rem solid #ccc;
-      outline-offset: -1.5rem;
-      cursor: pointer;
-      width: auto;
-     
-   
-   }
-
    .container .products-container{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
@@ -443,108 +449,6 @@ ul {
 }
 
 
-
-/* ---------------------------------------------------------------------------------
-
-
-
-.bubbles{
-   position: absolute;
-   bottom: -150px;
-   display: flex;
-   flex-wrap: wrap;
-   margin-top: 70px;
-   width: 100%;
-   justify-content: space-around;
-   z-index: 1000;
- }
- .bubbles span{
-   height: 60px;
-   width: 60px;
-   background: rgba(255, 255, 255, 0.1);
-   animation: move 10s linear infinite;
-   position: relative;
-   overflow: hidden;
-   z-index: 1000;
- }
- @keyframes move {
-   100%{
-     transform: translateY(-100vh);
-   }
- }
- .bubbles span.one{
-   animation-delay: 2.2s;
-   transform: scale(2.15)
- }
- .bubbles span.two{
-   animation-delay: 3.5s;
-   transform: scale(1.55)
- }
- .bubbles span.three{
-   animation-delay: 0.2s;
-   transform: scale(0.35)
- }
- .bubbles span.four{
-   animation-delay: 6s;
-   transform: scale(2.15)
- }
- .bubbles span.five{
-   animation-delay: 7s;
-   transform: scale(0.5)
- }
- .bubbles span.six{
-   animation-delay: 4s;
-   transform: scale(2.5)
- }
- .bubbles span.seven{
-   animation-delay: 3
-   
- }
- .bubbles span:before{
-   content: '';
-   position: absolute;
-   left: 0;
-   top: 0;
-   height: 60px;
-   width: 40%;
-   transform: skew(45deg) translateX(150px);
-   background: rgba(255, 255, 255, 0.15);
-   animation: mirror 3s linear infinite;
-   z-index: 1000;
- }
- @keyframes mirror {
-   100%{
-     transform: translateX(-450px);
-   }
- }
- .bubbles span.one:before{
-   animation-delay: 1.5s;
- }
- .bubbles span.two:before{
-   animation-delay: 3.5s;
- }
- .bubbles span.three:before{
-   animation-delay: 2.5s;
- }
- .bubbles span.four:before{
-   animation-delay: 7.5s;
- }
- .bubbles span.five:before{
-   animation-delay: 4.5s;
- }
- .bubbles span.six:before{
-   animation-delay: 0.5s;
- }
- .bubbles span.seven:before{
-   animation-delay: 6s;
- }
-
-
- 
-
-
-
----------------------------------------------------------------------------------*/
 
 
 
