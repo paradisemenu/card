@@ -70,6 +70,29 @@
         function AssignImgsToFilesArray(thefiles){
             let num =  Files.length + thefiles.length;
             let looplim = (num <= 10) ? thefiles.length : (10-Files.length);  //=====TIME 12:11 .===================//
+
+            for(let i =0; i < looplim; i++){
+                Files.push(TheFiles[i]);
+            }
+
+            if(num>10) alert("Max 10 ")
+        }
+
+        function CreateImgTags(){
+            imddiv.innerHTML="";
+
+            for(let i = 0; i< Files.length; i++){
+                FileReaders[i]= new FileReaders();
+
+                FileReaders[i].onload=function(){
+                    var immg = document.createElement('img');
+                    img.id = 'imgNo'+i;
+                    img.src = FileReaders[i].result;
+                    imgdiv.append(img);
+                }
+
+                File
+            }
         }
 
     </script>
