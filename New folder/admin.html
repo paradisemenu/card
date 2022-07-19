@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin panel</title>
+</head>
+<body>
+    <label>product name</label><input type="text" id="nameinp"> <br><br>
+    <label>product price</label><input type="number" id="priceinp"> <br><br>
+    <label>Stoke </label><input type="number" id="stockinp"> <br><br>
+    <label>Category</label>
+    <select id="catinp">
+        <option value="keyboard & mouse">keyboard & mouse</option>
+        <option value="Laptops">Laptops</option>
+        <option value="Monitors">Monitors</option>
+        <option value="Graphics card">Graphics card</option>
+        <option value="Power supply">Power supply</option>
+    </select><br><br>
+    <label>points #1</label> <input type="text" id="plinp" class="pointers"><br><br>
+    <label>points #1</label> <input type="text" id="plinp" class="pointers"><br><br>
+    <label>points #1</label> <input type="text" id="plinp" class="pointers"><br><br>
+    <label>points #1</label> <input type="text" id="plinp" class="pointers"><br><br>
+
+    <label id="pdlab">product description</label> <textarea id="desares"></textarea><br><br>
+
+    <div id="imagesDiv"></div>
+
+    <div id="controldiv">
+        <label id="loadlab"></label>
+        <button id="addprodbtn">Add Product</button>
+        <button id="selimgsbtn">select Images</button>
+    </div>
+
+    <script type="module">
+        //======================REFERENCE & VARIBLES===================//
+
+        var Files=[];
+        var FileReaders=[];
+        var ImageLinksArray=[];
+
+        const imgdiv       = document.getElementById('imagesDiv');
+        const selBtn       = document.getElementById('selimgsbtn');
+        const addBtn       = document.getElementById('addprodbtn');
+        const proglab      = document.getElementById('loadlab');
+
+        const name         = document.getElementById('loadlab');
+        const category     = document.getElementById('catinp');
+        const description  = document.getElementById('desarea');
+        const price        = document.getElementById('priceinp');
+        const stock        = document.getElementById('stockinp');
+
+        const p1           = document.getElementById('p1inp');
+        const p2           = document.getElementById('p2inp');
+        const p3           = document.getElementById('p3inp');
+        const p4           = document.getElementById('p4inp');
+
+        function OpenFileDialog(){
+            let inp=document.createElement('input');
+            inp.type='file';
+            inp.multiple='multiple';
+
+            inp.onchange=(e) =>{
+                AssignImgsToFilesArray(e.target.files);
+                CreateImgTags();
+            }
+        }
+
+        function AssignImgsToFilesArray(thefiles){
+            let num =  Files.length + thefiles.length;
+            let looplim = (num <= 10) ? thefiles.length : (10-Files.length);  //=====TIME 12:11 .===================//
+        }
+
+    </script>
+</html>
