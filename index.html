@@ -7,9 +7,12 @@
    
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+
 
    <!--=============== UNICONS ===============-->
    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
 
    <!-- custom css file link  -->
@@ -27,7 +30,9 @@
       <nav class="nav container">
           <a href="#" class="nav__logo">Category</a>
 
-          <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu" id="nav-menu" >
+
+            
               <ul class="nav__list">
 
 
@@ -375,6 +380,38 @@
 
 
 <!-- custom js file link  -->
+<script>
+
+
+
+  
+let menu = document.querySelector('#nav-menu');
+
+let header = document.querySelector('header');
+
+
+
+menu.onclick = () =>{
+
+  
+    navMenu.classList.remove('show-menu')
+
+}
+
+
+
+window.onscroll = () =>{
+
+   menu.classList.remove('fa-times');
+
+    //header.classList.remove('nav__menu');
+    navMenu.classList.remove('show-menu')
+
+};
+
+
+</script>
+
 <script src="js/nav.js"></script>
 
 </body>
