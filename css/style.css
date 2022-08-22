@@ -20,8 +20,7 @@ html{
 body{
    background: url(../images/q.gif) fixed center;
    background-color: #27ae60;
-   background-size: 100%;
-   
+   background-size: 100%;  
    -webkit-touch-callout:none;
    -webkit-user-select: none;
    -khtml-user-select:none;
@@ -29,7 +28,15 @@ body{
    user-select: none;
 }
 
+img{
+   -webkit-touch-callout:none;
+   -webkit-user-select: none;
+   -khtml-user-select:none;
+   -moz-user-select: none;
+   -o-user-select:none;
+   user-select: none;
 
+}
 
 /*--=============== NAVIGATION ===============*/
 
@@ -112,9 +119,6 @@ ul {
        box-shadow: 0 -10px 50px rgba(0, 0, 0, .15 );
        border-radius: 1.2rem 1.2rem 0 0;
        transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
-       
-      
-
    }
 }
 
@@ -209,17 +213,19 @@ ul {
        margin-right: auto;
    }
 }
-
-
-
-
-
 /*--=============== NAVIGATION CLOSS===============*/
 
 .container{
    max-width: 1200px;
    margin:0 auto;
    padding:3rem 2rem;
+
+   -webkit-touch-callout:none;
+   -webkit-user-select: none;
+   -khtml-user-select:none;
+   -moz-user-select: none;
+   -o-user-select:none;
+   user-select: none;
 }
 
 .container .title{
@@ -235,6 +241,14 @@ ul {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap:2rem;
+
+   -webkit-touch-callout:none;
+   -webkit-user-select: none;
+   -khtml-user-select:none;
+   -moz-user-select: none;
+   -o-user-select:none;
+   user-select: none;
+
 }
 
 .container .products-container .product{
@@ -253,6 +267,7 @@ ul {
    -webkit-user-select: none;
    -khtml-user-select:none;
    -moz-user-select: none;
+   -o-user-select:none;
    user-select: none;
 }
 
@@ -306,6 +321,8 @@ ul {
    position: relative;
    margin:2rem;
    width: 40rem;
+   border-radius: 15px;
+   
 }
 
 .products-preview .preview.active{
@@ -314,7 +331,7 @@ ul {
 
 .products-preview .preview img{
    height: 30rem;
-   border-radius: 50%;
+   border-radius: 15px;
 }
 
 .products-preview .preview .fa-times{
@@ -429,9 +446,9 @@ ul {
       
    }
    .products-preview .preview img{
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
    }
    .container .products-container .product img{
       height: auto;
